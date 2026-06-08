@@ -72,18 +72,46 @@ body {
 .card-informativo {
     background-color: var(--branco);
     border-radius: 12px;
-    padding: 30px;
+    overflow: hidden; /* Garante que a imagem respeite a borda arredondada do card */
     box-shadow: var(--sombra-card);
     border-top: 5px solid var(--verde-primario);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     transition: var(--transicao);
 }
 
 .card-informativo:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(46, 204, 113, 0.15);
+}
+
+/* Container e estilo das Imagens */
+.container-imagem {
+    width: 100%;
+    height: 200px; /* Altura fixa para manter o padrão visual dos cards */
+    overflow: hidden;
+    background-color: #eaeaea; /* Fundo cinza enquanto a imagem carrega */
+}
+
+.imagem-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    transition: var(--transicao);
+}
+
+/* Efeito de zoom na imagem ao passar o mouse no card */
+.card-informativo:hover .imagem-card {
+    transform: scale(1.05);
+}
+
+/* Espaçamento interno do conteúdo abaixo da imagem */
+.conteudo-card {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 /* Identificadores visuais superiores por temática */
@@ -107,6 +135,7 @@ body {
 /* Badges/Etiquetas de Categoria */
 .badge {
     display: inline-block;
+    align-self: flex-start; /* Mantém a etiqueta do tamanho do texto */
     padding: 4px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
