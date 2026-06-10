@@ -1,6 +1,4 @@
-/* ==========================================================================
-   CENTRAL DE VARIÁVEIS (Identidade Visual Sustentável)
-   ========================================================================== */
+
 :root {
     --verde-primario: #2ecc71;
     --verde-escuro: #27ae60;
@@ -13,10 +11,8 @@
     --transicao: all 0.3s ease;
 }
 
-/* ==========================================================================
-   RESET GLOBAL
-   ========================================================================== */
-* {
+
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,9 +28,7 @@ body {
     min-height: 100vh;
 }
 
-/* ==========================================================================
-   CABEÇALHO (Header)
-   ========================================================================== */
+
 .cabecalho {
     background: linear-gradient(135deg, var(--verde-escuro), var(--verde-primario));
     color: var(--branco);
@@ -55,9 +49,7 @@ body {
     font-style: italic;
 }
 
-/* ==========================================================================
-   CONTEÚDO PRINCIPAL & GRID DE SEÇÕES
-   ========================================================================== */
+
 .conteudo-principal {
     max-width: 1200px;
     margin: 40px auto;
@@ -68,11 +60,11 @@ body {
     flex: 1;
 }
 
-/* Cards Informativos */
+
 .card-informativo {
     background-color: var(--branco);
     border-radius: 12px;
-    overflow: hidden; /* Garante que a imagem respeite a borda arredondada do card */
+    overflow: hidden; 
     box-shadow: var(--sombra-card);
     border-top: 5px solid var(--verde-primario);
     display: flex;
@@ -85,27 +77,26 @@ body {
     box-shadow: 0 8px 25px rgba(46, 204, 113, 0.15);
 }
 
-/* Container e estilo das Imagens */
+
 .container-imagem {
     width: 100%;
-    height: 200px; /* Altura fixa para manter o padrão visual dos cards */
+    height: 200px; 
     overflow: hidden;
-    background-color: #eaeaea; /* Fundo cinza enquanto a imagem carrega */
-}
+    background-color: #eaeaea; 
 
 .imagem-card {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    object-fit: cover; 
     transition: var(--transicao);
 }
 
-/* Efeito de zoom na imagem ao passar o mouse no card */
+
 .card-informativo:hover .imagem-card {
     transform: scale(1.05);
 }
 
-/* Espaçamento interno do conteúdo abaixo da imagem */
+
 .conteudo-card {
     padding: 25px;
     display: flex;
@@ -114,7 +105,7 @@ body {
     flex-grow: 1;
 }
 
-/* Identificadores visuais superiores por temática */
+
 .card-informativo.entender { border-top-color: var(--verde-escuro); }
 .card-informativo.solo { border-top-color: var(--marrom-terra); }
 .card-informativo.fauna { border-top-color: var(--amarelo-sol); }
@@ -132,10 +123,10 @@ body {
     flex-grow: 1;
 }
 
-/* Badges/Etiquetas de Categoria */
+
 .badge {
     display: inline-block;
-    align-self: flex-start; /* Mantém a etiqueta do tamanho do texto */
+    align-self: flex-start; 
     padding: 4px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -147,9 +138,6 @@ body {
 .badge-solo { background-color: #fbeee6; color: var(--marrom-terra); }
 .badge-fauna { background-color: #fef9e7; color: #b7950b; }
 
-/* ==========================================================================
-   BOTÕES E INTERAÇÃO
-   ========================================================================== */
 .btn-primario {
     background-color: var(--verde-primario);
     color: var(--branco);
@@ -175,9 +163,6 @@ body {
 .btn-fauna { background-color: var(--amarelo-sol); color: var(--texto-escuro); }
 .btn-fauna:hover { background-color: #d4ac0d; }
 
-/* ==========================================================================
-   RODAPÉ (Footer)
-   ========================================================================== */
 .rodape {
     background-color: var(--texto-escuro);
     color: var(--branco);
@@ -193,3 +178,12 @@ body {
     .cabecalho h1 { font-size: 1.8rem; }
     .conteudo-principal { margin: 20px auto; }
 }
+
+.imagem-card {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
