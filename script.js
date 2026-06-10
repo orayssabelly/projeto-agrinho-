@@ -15,10 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/**
- * Função responsável por exibir caixas de informações interativas
- * com base no tema escolhido pelo usuário.
- */
+
 function exibirMensagemEducativa(tema) {
     let mensagem = "";
 
