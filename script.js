@@ -1,14 +1,14 @@
-// Aguarda o carregamento do DOM para rodar os scripts com segurança
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Portal Agrinho 2026 carregado com sucesso!');
 
-    // Seleciona todos os botões que possuem a classe .btn-primario
+    
     const botoes = document.querySelectorAll('.btn-primario');
 
-    // Cria um evento de escuta de clique para cada um dos botões encontrados
+    
     botoes.forEach(botao => {
         botao.addEventListener('click', (evento) => {
-            // Captura o atributo de identificação "data-tema" do botão clicado
+            
             const tema = evento.target.getAttribute('data-tema');
             exibirMensagemEducativa(tema);
         });
@@ -33,6 +33,6 @@ function exibirMensagemEducativa(tema) {
             mensagem = "Incrível! Você está descobrindo a sustentabilidade e a preservação do meio ambiente.";
     }
 
-    // Exibe a mensagem de feedback educativo para o usuário
+    
     alert(mensagem);
 }
